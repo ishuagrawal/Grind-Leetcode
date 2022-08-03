@@ -7,7 +7,7 @@
 
 ## Getting Started:
 1. Clone this repository:  
-`git clone `
+`git clone git@github.com:ishuagrawal/Grind-Leetcode.git`
 1. Add the project as an extension to your Chrome browser:
    * Click on the triple dots in the top right of the browser and select "More Tools" > "Extensions".
    * Make sure "Developer Mode" is enabled.
