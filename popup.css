@@ -1,0 +1,88 @@
+@import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
+
+
+html, body{
+	font-family: 'Sawasdee', sans-serif;
+    min-width: 400px;
+    min-height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container1 {
+    width: 100%;
+    background-color: #fff;
+    margin: 30px;
+}
+
+.pageName {
+    margin-top: 0;
+    font-size: 35px;
+    color: rgb(64, 64, 235);
+}
+
+#dcc {
+    width: max-content;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#dcc h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5%;
+    font-size: 25px;
+}
+
+#dcc i {
+    padding-right: 5px;
+}
+
+#dccCard {
+    width: 80%;
+    display: none;
+}
+
+#accordionTopics {
+    width: 80%;
+}
+
+#actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#questionLink {
+    background-color: rgb(64, 64, 235);
+    border-color: rgb(64, 64, 235);
+    color: white;
+    margin-right: 5px;
+}
+
+#todoistAdd {
+    background-color: #E44232;
+    color: white;
+}
+
+#todoistLogo {
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+#signOut {
+    background-color: #E44232;
+    color: white;
+    display: none;
+}
+
+#container2 {
+    margin-top: 50px;
+    width: 100%;
+}
+
+#toast {
+    background-color: rgb(172, 230, 172);
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Grind Leetcode",
+    "description": "Practice Leetcode daily.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "identity"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {}
+    }
+  }

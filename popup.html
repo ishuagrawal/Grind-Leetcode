@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="popup.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+        <div class="container1">           
+            <section id="homePage" class="page">
+                <div id="dcc">
+                    <h1 class="pageName"><i class="fa fa-bullseye"></i>Today's Challenge</h1>
+                </div>
+
+                <div class="card" id="dccCard">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                        <div class="accordion" id="accordionTopics">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  Topics
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionTopics">
+                                <div class="accordion-body" id="topics">
+                                  Text
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div id="actions">
+                            <div>
+                                <a href="#" id="questionLink" title="Leetcode Link" class="btn" target="_blank"><i class="fa fa-link"></i></a>
+                                <a href="#" id="todoistAdd" class="btn" data-bs-toggle="modal" data-bs-target="#todoistModal">Add to Todoist</a>
+                            </div>
+                            <a href="#" id="signOut" title="Sign Out" class="btn"><i class="fa fa-power-off"></i></a>
+
+                            <!-- Modal for connecting to Todoist -->
+                            <div class="modal fade" id="todoistModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Sign in to Todoist</h5>
+                                            <button type="button" class="btn-close" id="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/todoist.png" alt="Todoist" id="todoistLogo">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" id="connect" class="btn btn-primary">Connect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal for adding task to Todoist-->
+                            <div class="modal fade" id="tasksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Add task to Todoist</h5>
+                                            <button type="button" class="btn-close" id="close2" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/todoist.png" alt="Todoist" id="todoistLogo">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" id="add" class="btn btn-primary">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Toast -->
+        <div id="container2">
+            <div aria-live="polite" aria-atomic="true" class="position-relative">
+                <div class="toast-container position-absolute bottom-0 end-0 p-3">
+                    <div class="toast align-items-center" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="d-flex">
+                            <div class="toast-body" id="message">
+                                Success! Task added to Todoist!
+                            </div>
+                            <button type="button" class="btn-close btn-close-black me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
